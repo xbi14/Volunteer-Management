@@ -1,0 +1,38 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Đăng Nhập Tài Khoản</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'user_login' %}" method="post">
+                    {% csrf_token %}
+                    {% if show_login_form %}
+                        {% if messages %}
+                            <div class="alert alert-danger">
+                                <strong>Lỗi!</strong>
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                    <div class="mb-3">
+                        <label class="form-label" for="username"><i class="fa-solid fa-user"></i> Tên đăng nhập:</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label" for="password"><i class="fa-solid fa-lock"></i> Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu">
+                    </div>
+                    <button type="submit" class="btn-submit-modal">Đăng Nhập</button>
+                    <input type="checkbox" class="form-check-input" id="remember_me" name="remember_me">
+                    <label class="form-check-label" for="remember_me">Ghi nhớ đăng nhập</label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

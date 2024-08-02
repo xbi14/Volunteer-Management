@@ -1,0 +1,291 @@
+/*----------------- navbar -----------------*/
+.gradient-custom {
+    /* fallback for old browsers */
+    /* background: #6a11cb; */
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to right, rgba(82, 45, 218, 0.9), rgba(96, 139, 212, 0.9)); */
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); */
+    /* background-color: transparent;
+    backdrop-filter: blur(40px); */
+    background-color: #2c2c3c;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+  }
+
+.navbar {
+  transition: background-color 0.4s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'Poppins', sans-serif */
+  font-weight: 500;
+  padding: 10px 0;
+  color : #e5e7eb;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+  transform: scale(0.97);
+  transition: transform 0.3s ease;
+}
+
+.navbar-active {
+  transition: transform 0.4s ease-in-out; /* Tùy chỉnh thời gian animation */
+  transform: translateY(0); /* Khởi động navbar ở vị trí ban đầu */
+}
+
+.navbar.scrolled {
+  transform: translateY(-100%); /* Vị trí ẩn của navbar khi trượt lên */
+  transition: transform 0.4s ease-in-out;
+}
+
+/*----------------- body -----------------*/
+
+body {
+  margin: 0;
+  /* background-color: #f1f1f1; */
+  transition: background-color 0.4s ease;
+  background-color: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+main {
+  color: #333333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*----------------- footer -----------------*/
+footer {
+  flex-shrink: 0;
+  background-color: #1f2024;
+  color: #e5e7eb;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.4s ease;
+}
+
+/*----------------- light/dark-mode -----------------*/
+
+.light-mode {
+  background-color: #ffffff; /* Màu nền sáng */
+  color: #333; /* Màu chữ tối */
+}
+
+.dark-mode {
+  background-color: #111827; /* Màu nền tối #2c2c3c*/
+  color: #e5e7eb; /* Màu chữ sáng */
+}
+
+/*----------------- toggle-button -----------------*/
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.toggle-button:active {
+  transform: scale(0.98);
+}
+
+/*----------------- btn-signup -----------------*/
+
+.btn-signup {
+  /* background-color: #4338ca; */
+  background-color: #dbba57;
+  /* color: #e5e7eb; */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-signup:hover {
+  /* background-color: #392dbb; */
+  background-color: #d4a03b;
+  color: #ffffff;;
+}
+
+.btn-signup:focus {
+  box-shadow: none;
+}
+
+.btn-signup:active {
+  transform: scale(0.98);
+}
+
+/*----------------- search-box -----------------*/
+
+.search-box {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 5px 10px;
+  padding-top: 6px;
+  border: none;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: 550px;
+}
+
+.search-box:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-txt {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  width: 500px;
+}
+
+.search-txt:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-txt:focus {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.search-btn:focus {
+  box-shadow: none;
+}
+/* ------------------- Animated Dropdown ------------------- */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  animation: fadeInDown 0.3s ease-in-out;
+  right: 0;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-avatar-container {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 2px;
+  border: 2px solid #00f94b;
+}
+
+.avatar-img {
+  width: 100%;
+  height: auto;
+}
+
+.user-name {
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; 
+
+}
+
+.dropdown:hover .user-name {
+  opacity: 1;
+}
+
+.dropdown-menu a {
+  color: #2e2b2b;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  background-color: #4376d0;
+  color: #fff;
+  /* transform: translateX(5px); */
+  transform: scale(0.97);
+  transition: transform 0.3s ease;
+}
+
+/*----------------- slide up animation -----------------*/
+.slide-up {
+  animation: slideUp 0.7s ease-in-out forwards;
+  }
+  
+  @keyframes slideUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  }
+
+.vl {
+  border-left: 2px solid #dbba57;
+  height: 170px;
+}

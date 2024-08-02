@@ -1,0 +1,87 @@
+.header-image-container {
+position: relative;
+text-align: center;
+}
+
+.header-image {
+width: 100%;
+height: 300px;
+object-fit: cover;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.4); /* Màu đen mờ đục */
+}
+
+.header-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+z-index: 1; /* Đảm bảo văn bản nằm trên lớp overlay */
+font-weight: bold;
+}
+
+/* ----------------Post------------------ */
+
+.banner-footer{
+    display: flex;
+    justify-content: normal;
+    margin-top: 20px;
+}
+
+.banner-action{
+    margin-right: 15px;
+}
+
+.card-post{
+    border: 2px solid #374151;
+    border-radius: 10px;
+}
+
+h5.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    max-height: 2.4em; /* Điều chỉnh chiều cao tùy ý */
+    line-height: 1.2; /* Điều chỉnh line-height tùy ý */
+    margin-bottom: 10px; /* Khoảng cách margin bạn muốn */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 0.7s ease;
+}
+
+.btn-detail-post{
+    background-color: #dbba57;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    float : right;
+    margin-bottom: 15px;
+}
+
+.btn-detail-post:hover {
+    background-color: #d4a03b;
+    color: #ffffff;
+}
+
+.btn-detail-post:focus {
+    box-shadow: none;
+}
+
+.btn-detail-post:active {
+    transform: scale(0.98); 
+}
